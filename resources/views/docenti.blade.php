@@ -38,9 +38,23 @@
         <div class="row h-75 justify-content-center align-items-center">
             <div class="col-12">
                 <h1 class="text-center dislpay-4 title">
-                    BENVENUTA {{$titolo}}
+                    I nostri docenti
                 </h1>
             </div>
+        </div>
+        <div class="row justify-content-center align-items center">
+              @foreach ($teachers as $teacher )
+              <div class="col-12 col-md-3 py-5">
+                <div class="card mx-auto" style="width: 18rem;">
+                  <img src="https://picsum.photos/200" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{$teacher['name']}} {{$teacher['surname']}}</h5>
+                    <p class="card-text">{{$teacher['subject']}}</p>
+                    <a href="{{route('teacher.detail', ['name'=> $teacher['name']])}}" class="btn btn-primary">Vai al dettaglio</a>
+                  </div>
+                </div>
+              </div>
+              @endforeach
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

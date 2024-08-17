@@ -1,0 +1,16 @@
+.title{
+    color: blue;
+   }
+
+.bg-background{
+    background-image: url(./background.jpg);    
+    background-position: center;   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.height-custom{
+    height: 65vh;
+}
